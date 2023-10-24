@@ -1,0 +1,58 @@
+*,
+*::after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right, #f857a6, #ff5858);
+}
+
+.container-grid {
+    width: max-content;
+    padding: 1em;
+    margin-inline: auto;
+    grid-gap: 0.3em;
+    display: grid;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    width: 100%;
+    grid-column: 1 / -1;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: end;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    letter-spacing: 0.2ch;
+}
+
+.display-prev {
+    font-size: 1.5rem;
+    opacity: 0.5;
+}
+
+.display-result {
+    font-size: 2.5rem;
+}
+
+button {
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background: rgba(255, 255, 255, 0.5);
+}
